@@ -43,23 +43,21 @@
 </div>
 
 <div class="container pt-5">
-<div class="row">
-<div class="col-md-6 col-auto">
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-      <a class="nav-link active" href="#msgs"
-            data-toggle="tab" role="tab">今までの投稿一覧</a>
-      </li>
-      </div>
+  <div class="row">
+    <div class="col-md-12 col-auto">
+      <ul class="nav nav-tabs nav-justified justify-content-center">
+        <li class="nav-item text-dark">
+          <a class="nav-link list-inline active" href="#msgs"
+              data-toggle="tab" role="tab">今までの投稿一覧</a>
+        </li>
 
-      <div class="col-md-6 col-auto">
-      <li class="nav-item list-unstyled">
-      <a class="nav-link" href="#frms"
-            data-toggle="tab" role="tab"><i class="far fa-thumbs-up"></i>を押した一覧</a>
-      </li>
-    </ul>
+        <li class="nav-item list-unstyled list-inline">
+          <a class="nav-link" href="#frms"
+              data-toggle="tab" role="tab"><i class="far fa-thumbs-up"></i>を押した一覧</a>
+        </li>
+      </ul>
     </div>
-    </div>
+  </div>
 </div>
 
 @endsection
