@@ -13,13 +13,13 @@ class ProfileController extends Controller
     $user = Auth::user();
     return view('profile/index' , compact('user'));
   }
-  public function edit(Request $request , $id){
+  public function edit(Request $request){
     $user = Auth::user();
     return view('profile/edit' , compact('user'));
   }
 
 
-  public function update(Request $request , $id){
+  public function update(Request $request){
     Profile::where('id', '=' , $id)->update([
       'user_id'=> Auth::id(),
       'name' => $request->name,
