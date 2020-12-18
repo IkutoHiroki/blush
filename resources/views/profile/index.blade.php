@@ -11,7 +11,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3 pt-5">
-      <p class="h2">名前</p>
+      <p class="h2">{{$user->name}}</p>
       <div class="float-right">
         <a class="btn btn-outline-secondary btn-lg" href="/profile/edit">編集する</a>
       </div>
