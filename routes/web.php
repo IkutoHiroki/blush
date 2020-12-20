@@ -30,8 +30,8 @@ Route::post('profile/update', 'ProfileController@update');
 
 Route::get('post/create', 'PostController@create');
 Route::post('post/store', 'PostController@store');
-Route::get('post/edit/{id}', 'PostController@edit');
-Route::post('post/update/{id}', 'PostController@update');
+Route::get('post/edit', 'PostController@edit');
+Route::post('post/update', 'PostController@update');
 Route::get('post/delete', 'PostController@delete');
 
 
