@@ -20,18 +20,18 @@ Auth::routes();
 Route::get('/practice', 'PracticeController@index');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 
 Route::group(['middleware' => ['auth']], function() {
-Route::get('/profile', 'ProfileController@index');
-Route::get('profile/edit', 'ProfileController@edit');
-Route::post('profile/update', 'ProfileController@update');
+Route::get('/profile/{id}', 'ProfileController@index');
+Route::get('profile/edit/{id}', 'ProfileController@edit');
+Route::post('profile/update/{id}', 'ProfileController@update');
 });
 
 Route::get('post/create', 'PostController@create');
 Route::post('post/store', 'PostController@store');
-Route::get('post/edit', 'PostController@edit');
-Route::post('post/update', 'PostController@update');
-Route::get('post/delete', 'PostController@delete');
+Route::get('post/edit/{id}', 'PostController@edit');
+Route::post('post/update/{id}', 'PostController@update');
+Route::get('post/delete/{id}', 'PostController@delete');
 
 

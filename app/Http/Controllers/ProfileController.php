@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use App\Profile;
+use App\User;
+use App\Post;
 
 class ProfileController extends Controller
 {
@@ -20,7 +20,7 @@ class ProfileController extends Controller
 
 
   public function update(Request $request){
-    Profile::where('id', '=' , $id)->update([
+    User::where('id', '=' , $id)->update([
       'user_id'=> Auth::id(),
       'name' => $request->name,
       'profile' => $request->profile,

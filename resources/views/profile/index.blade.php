@@ -7,7 +7,7 @@
     <p class="h1">マイページ</p>
   </div>
 
-  <div class="container">
+  <div class="container pt-3">
     @csrf
     <div class="row">
       <div class="col d-flex justify-content-around">
@@ -57,7 +57,7 @@
   </div>
 
 
-      <!--  投稿内容を表示 1つ目  -->
+      <!--  投稿内容を表示 2つ目  -->
   <div class="container">
     <div class="row">
       <div class="col-6 pb-5">
@@ -65,83 +65,85 @@
           <div class="card-body">
             <h5 class="card-title">ユーザー名</h5>
             <h6 class="card-subtitle text-right">日付</h6>
-          </div>
-            <img src="..." class="img-fluid" width="100%" height="400" alt="">
-          </div>
-          <div class="row text-right">
-            <div class="col">
-              <button type="button" class="btn btn-light"><i class="fas fa-caret-square-down fa-5x"></i></button>
+            <div>
+              <img src="..." class="img-fluid" width="100%" height="400" alt="">
             </div>
-          </div>
+            <div class="row text-right">
+              <div class="col">
+                <button type="button" class="btn btn-light"><i class="fas fa-caret-square-down fa-5x"></i></button>
+              </div>
+            </div>
 
-          <!-- コメントの表示 -->
-          <div class="border h3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, similique.
-          </div>
-          <div class="row text-right">
-            <div class="col">
-              <button type="button" class="btn btn-light"><i class="far fa-thumbs-up fa-4x"></i></button><smail class="h2">数字</smail>
+            <!-- コメントの表示 -->
+            <div class="border h3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, similique.
             </div>
-          </div>
+            <div class="row text-right">
+              <div class="col">
+                <button type="button" class="btn btn-light"><i class="far fa-thumbs-up fa-4x"></i></button><smail class="h2">数字</smail>
+              </div>
+            </div>
 
               <!-- ブラックリスト関係 -->
-          <div class="row text-center pt-2">
-            <div class="col">
-              <a href="#" class="stretched-link">問題のある画像を報告する</a>
+            <div class="row text-center pt-2">
+              <div class="col">
+                <a href="#" class="stretched-link">問題のある画像を報告する</a>
+              </div>
             </div>
-          </div>
 
            <!-- 編集ボタン・削除ボタン -->
-          <div class="row justify-content-around border-bottom pt-2">
-            <div class="col">
-              <a class="btn btn-success btn-lg" href="/post/update">編集する</a>
-            </div>
-            <div class="col">
-              <a class="btn btn-danger btn-lg" href="/post/detele">削除する</a>
+            <div class="row justify-content-around border-bottom pt-2">
+              <div class="col">
+                <a class="btn btn-success btn-lg" href="/post/update">編集する</a>
+              </div>
+              <div class="col">
+                <a class="btn btn-danger btn-lg" href="/post/detele">削除する</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <!--  投稿内容を表示 2つ目  -->
-      <div class="col-md-6 pb-5">
+      <div class="col-6 pb-5">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">ユーザー名</h5>
             <h6 class="card-subtitle text-right">日付</h6>
-          </div>
-            <img src="..." class="img-fluid" width="100%" height="400" alt="">
-          </div>
-          <div class="row text-right">
-            <div class="col">
-              <button type="button" class="btn btn-light"><i class="fas fa-caret-square-down fa-5x"></i></button>
+            <div>
+              <img src="..." class="img-fluid" width="100%" height="400" alt="">
             </div>
-          </div>
+            <div class="row text-right">
+              <div class="col">
+                <button type="button" class="btn btn-light"><i class="fas fa-caret-square-down fa-5x"></i></button>
+              </div>
+            </div>
 
-          <!-- コメントの表示 -->
-          <div class="border h3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, similique.
-          </div>
-          <div class="row text-right">
-            <div class="col">
-              <button type="button" class="btn btn-light"><i class="far fa-thumbs-up fa-4x"></i></button><smail class="h2">数字</smail>
+            <!-- コメントの表示 -->
+            <div class="border h3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, similique.
             </div>
-          </div>
+            <div class="row text-right">
+              <div class="col">
+                <button type="button" class="btn btn-light"><i class="far fa-thumbs-up fa-4x"></i></button><smail class="h2">数字</smail>
+              </div>
+            </div>
 
               <!-- ブラックリスト関係 -->
-          <div class="row text-center pt-2">
-            <div class="col">
-              <a href="#" class="stretched-link">問題のある画像を報告する</a>
+            <div class="row text-center pt-2">
+              <div class="col">
+                <a href="#" class="stretched-link">問題のある画像を報告する</a>
+              </div>
             </div>
-          </div>
 
-            <!-- 編集ボタン・削除ボタン -->
-          <div class="row justify-content-around border-bottom pt-2">
-            <div class="col-2">
-              <a class="btn btn-success btn-lg" href="/post/update">編集する</a>
-            </div>
-            <div class="col-2">
-              <a class="btn btn-danger btn-lg" href="/post/detele">削除する</a>
+           <!-- 編集ボタン・削除ボタン -->
+            <div class="row justify-content-around border-bottom pt-2">
+              <div class="col">
+                <a class="btn btn-success btn-lg" href="/post/update">編集する</a>
+              </div>
+              <div class="col">
+                <a class="btn btn-danger btn-lg" href="/post/detele">削除する</a>
+              </div>
             </div>
           </div>
         </div>

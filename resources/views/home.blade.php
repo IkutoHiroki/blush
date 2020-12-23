@@ -5,7 +5,6 @@
         @csrf
         <div class="row justify-content-center">
             <h1>投稿一覧</h1>
-        
                 <!-- タブの一覧 -->
             <div class="col-12 col-auto py-5">
                 <ul class="nav nav-tabs nav-justified nav-pills justify-content-center border-dark">
