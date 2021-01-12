@@ -18,6 +18,7 @@ class CreateFavoritesTable extends Migration
             $table->bigInteger('user_id');
             $table->bigInteger('post_id');
             $table->timestamps();
+            $table->unique(['user_id', 'post_id']);
         });
     }
 
