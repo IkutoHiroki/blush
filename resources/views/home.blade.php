@@ -10,7 +10,8 @@
                 <ul class="nav nav-tabs nav-justified nav-pills justify-content-center border-dark">
                     <li class="nav-item text-dark">
                         <a class="nav-link list-inline h3 {{$order == 'new' ? 'active' : ''}}" href="/home"
-                            >新着順</a>
+                            >新着順
+                        </a>
                     </li>
 
                     <li class="nav-item list-unstyled list-inline">
@@ -60,7 +61,7 @@
                 <!-- ブラックリスト関係 -->
                 <div class="row text-center border-bottom pt-2">
                     <div class="col">
-                        <a href="#" class="stretched-link">問題のある画像を報告する</a>
+                        <a href="/blacklist/store/{{$post->post_id}}" class="stretched-link">問題のある画像を報告する</a>
                     </div>
                 </div>
             </div>

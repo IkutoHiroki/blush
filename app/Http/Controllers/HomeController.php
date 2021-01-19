@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Post;
 use App\Favorite;
+use App\Blacklist;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -26,6 +28,11 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
+        $blacklist_obj = Blacklist::where('user_id' , Auth::id())->get();
+        $blacklist = [];
+        foreach($blacklist_obj as $black){
+            array_push($blacklist , $black->post_id);
+        }
         $order = $request->input('order');
         $order = isset($order) ? $order : 'new';
         $posts = [];
@@ -37,6 +44,7 @@ class HomeController extends Controller
                 ->join('users' , 'posts.user_id' , 'users.id')
                 ->groupBy('post_id')
                 ->orderBy('count' , 'desc')
+                ->whereNotIn('posts.id', $blacklist)
                 ->paginate(10);
         }
         // 新着順
@@ -44,6 +52,7 @@ class HomeController extends Controller
             $posts = Post::
                 select('posts.*' , 'users.name' , 'posts.id as post_id')
                 ->join('users' , 'posts.user_id' , 'users.id')
+                ->whereNotIn('posts.id', $blacklist)
                 ->orderBy('posts.created_at' , 'desc')->paginate(10);
         }
         // おすすめ順
@@ -54,6 +63,7 @@ class HomeController extends Controller
                 ->join('posts' , 'favorites.post_id' , 'posts.id')
                 ->join('users' , 'posts.user_id' , 'users.id')
                 ->where('posts.created_at' , '>' , $before_month)
+                ->whereNotIn('posts.id', $blacklist)
                 ->groupBy('post_id')
                 ->orderBy('count' , 'desc')
                 ->paginate(10);
