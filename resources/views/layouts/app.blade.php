@@ -45,6 +45,13 @@ $(function(){
  
   });
 });
+
+// コメント表示処理
+function clickComment(event){
+    event.target.classList.toggle('fa-caret-square-up');
+    event.target.classList.toggle('fa-caret-square-down');
+    event.target.closest('.text-right').lastChild.classList.toggle('d-none');
+}
 </script>
 
 </head>

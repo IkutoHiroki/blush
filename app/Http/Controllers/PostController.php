@@ -29,24 +29,10 @@ class PostController extends Controller
     ]);
     return redirect('/home');
   }
-  
-  public function edit($id){
-    $ContributorID = Post::find($id);
-    return view('post/edit' , compact('ContributorID'));
-  }
-
-  public function update(Request $request , $id){
-    Post::where('id' , '=' , $id)->update([
-      'user_id' => Auth::id(),
-      'image' => $request->image,
-      'detail' => $request->detail,
-      ]);
-    return redirect('/home');
-  }
 
   public function delete(Request $request , $id){
     Post::where('id' , '=' , $id)->delete();
-    return redirect('/home');
+    return redirect('/profile/'.Auth::id());
   }
 
   public function favorite(Request $request , $id){

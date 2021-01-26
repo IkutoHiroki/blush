@@ -42,16 +42,15 @@
                     </div>
                         <img src="{{$post->image}}" class="img-fluid" width="100%" height="400" alt="">
                 </div>
-                <div class="row text-right">
-                    <div class="col">
-                        <button type="button" class="btn btn-light"><i class="fas fa-caret-square-down fa-5x"></i></button>
-                    </div>
-                </div>
 
                 <!-- コメントの表示 -->
-                <div class="border h3">
-                    {{$post->detail}}
+                <div class="text-right">
+                    <button type="button" class="btn btn-light" onclick="clickComment(event)"><i class="fas fa-caret-square-up fa-5x"></i></button>
+                    <div class="border comment text-left h3 d-none">
+                        {{$post->detail}}
+                    </div>
                 </div>
+                
                 <div class="row text-right">
                     <div class="col">
                         <a href="/post/favorite/{{$post->post_id}}" class="btn btn-light"><i class="far fa-thumbs-up fa-4x"></i></a><smail class="h2">{{$post->favorite}}</smail>
