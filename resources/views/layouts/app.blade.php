@@ -77,13 +77,7 @@ function clickComment(event){
                         <li class="nav-item" >
                             <a class="nav-link" href="/home">{{ 'メインページ' }}</a>
                         </li>
-                        <li class="nav-item" >
-                            <a class="nav-link" href="/profile/{{\Auth::id()}}">{{ 'マイページ' }}</a>
-                        </li>
-
-                        <li class="nav-item" >
-                            <a class="nav-link" href="/post/create">{{ '新規投稿' }}</a>
-                        </li>
+                        
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -95,6 +89,13 @@ function clickComment(event){
                                 </li>
                             @endif
                         @else
+                        <li class="nav-item" >
+                            <a class="nav-link" href="/profile/{{\Auth::id()}}">{{ 'マイページ' }}</a>
+                        </li>
+
+                        <li class="nav-item" >
+                            <a class="nav-link" href="/post/create">{{ '新規投稿' }}</a>
+                        </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -121,6 +122,15 @@ function clickComment(event){
         <main class="py-4">
             @yield('content')
         </main>
+
+                <!-- フッター部分 -->
+        <div class="py-2 bg-dark text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    Copyright ©︎ brush2020
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

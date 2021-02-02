@@ -109,14 +109,4 @@
     {{ $posts->links() }}
   </div>
 
-  
-
-        <!-- フッター部分 -->
-  <div class="py-2 bg-dark text-white">
-      <div class="container">
-          <div class="row justify-content-center">
-              Copyright ©︎ 2020
-          </div>
-      </div>
-  </div>
 @endsection
